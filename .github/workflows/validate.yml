@@ -1,0 +1,62 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: tools/go.mod
+          cache: false
+      - name: Validate all manifests
+        run: go run ./cmd/validate ../manifests
+      - name: Download and hash changed manifests
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          changed=$(git diff --name-only --diff-filter=AMR "$BASE_SHA"...HEAD -- '../manifests/*.json' | sed 's#^#../#')
+          if [ -z "$changed" ]; then
+            echo "no manifest changed"
+            exit 0
+          fi
+          go run ./cmd/validate -download $changed
+
+  signatures:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: tools/go.mod
+          cache: false
+      # warn only: contributors can't sign, the maintainer signs after merge
+      - name: Check signatures
+        run: |
+          set +e
+          out=$(go run ./cmd/sign verify -keys ../keys.json ../manifests 2>&1)
+          code=$?
+          echo "$out"
+          if [ $code -ne 0 ]; then
+            echo "$out" | grep '^UNSIGNED ' | sed 's/^UNSIGNED /::warning title=Waiting for signature::/'
+            echo "::warning title=Catalog not fully signed::the maintainer needs to run the signer and push the .sig files"
+          fi
+          exit 0

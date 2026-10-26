@@ -1,0 +1,26 @@
+{
+  "id": "keepassxc.keepassxc",
+  "name": "KeePassXC",
+  "publisher": "KeePassXC Team",
+  "summary": "Offline password manager that keeps your passwords in an encrypted local file.",
+  "description": "KeePassXC stores your passwords in an encrypted KeePass database file on your own disk. Nothing goes to a cloud unless you sync the file yourself.\n\nIt can generate passwords, fill them into browsers through an extension, type them into other apps, and hold TOTP codes and SSH keys.",
+  "category": "security",
+  "license": "GPL-2.0-only OR GPL-3.0-only",
+  "homepage": "https://keepassxc.org/",
+  "source": "https://github.com/keepassxreboot/keepassxc",
+  "icon": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/2.8.0/share/branding/png/keepassxc-256x256.png",
+  "screenshots": [
+    "https://raw.githubusercontent.com/keepassxreboot/keepassxc/2.8.0/docs/images/database_view.png"
+  ],
+  "version": "2.8.0",
+  "released": "2026-10-21",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/keepassxreboot/keepassxc/releases/download/2.8.0/KeePassXC-2.8.0-x64.msi",
+    "sha256": "4f105af5ba780428718c8be5614cf95deceed5cb3b474a9bd624c5df81cec6e5",
+    "size": 69419008,
+    "format": "msi",
+    "silent_args": "/qb",
+    "detect": "KeePassXC"
+  }
+}

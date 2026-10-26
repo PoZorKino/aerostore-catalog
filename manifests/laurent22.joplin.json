@@ -1,0 +1,26 @@
+{
+  "id": "laurent22.joplin",
+  "name": "Joplin",
+  "publisher": "Laurent Cozic",
+  "summary": "Note taking app with Markdown, to-dos and end-to-end encrypted sync.",
+  "description": "Joplin keeps notes and to-do lists in notebooks. Notes are written in Markdown and can hold images, attachments and tags.\n\nIt syncs through Nextcloud, Dropbox, OneDrive, WebDAV or a Joplin server, with optional end-to-end encryption, and imports Evernote exports.",
+  "category": "office",
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://joplinapp.org/",
+  "source": "https://github.com/laurent22/joplin",
+  "icon": "https://raw.githubusercontent.com/laurent22/joplin/v3.7.21/Assets/LinuxIcons/256x256.png",
+  "screenshots": [
+    "https://raw.githubusercontent.com/laurent22/joplin/v3.7.21/Assets/WebsiteAssets/images/home-top-img.png"
+  ],
+  "version": "3.7.21",
+  "released": "2026-09-25",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-Setup-3.7.21.exe",
+    "sha256": "4222536c69360a30a566627b35c2e1cd8d38d0c79735ebde4e39edbcddd750cd",
+    "size": 361008040,
+    "format": "exe",
+    "silent_args": "/S",
+    "detect": "Joplin"
+  }
+}

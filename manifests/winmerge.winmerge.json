@@ -1,0 +1,25 @@
+{
+  "id": "winmerge.winmerge",
+  "name": "WinMerge",
+  "publisher": "WinMerge Team",
+  "summary": "Compare and merge files and folders side by side.",
+  "description": "WinMerge shows the differences between two or three files or folders and lets you merge them. Changes are highlighted down to single characters.\n\nIt can also compare images, binary files and table data, and plugs into Explorer and version control tools.",
+  "category": "development",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://winmerge.org/",
+  "source": "https://github.com/WinMerge/winmerge",
+  "icon": "https://raw.githubusercontent.com/WinMerge/winmerge/v2.16.58.2/Src/res/Merge.ico",
+  "screenshots": [
+    "https://raw.githubusercontent.com/WinMerge/winmerge/v2.16.58.2/Docs/Manual/English/screenshots/filemerged1.png"
+  ],
+  "version": "2.16.58.2",
+  "released": "2026-08-27",
+  "install": {
+    "type": "portable",
+    "url": "https://github.com/WinMerge/winmerge/releases/download/v2.16.58.2/winmerge-2.16.58.2-x64-exe.zip",
+    "sha256": "5732474add39283f44bd20c66e57503d26f435e695feabc4140ba2f91d2e7804",
+    "size": 24493933,
+    "archive": "zip",
+    "exe": "WinMerge/WinMergeU.exe"
+  }
+}

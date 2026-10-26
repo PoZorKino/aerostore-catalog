@@ -1,0 +1,24 @@
+{
+  "id": "sharex.sharex",
+  "name": "ShareX",
+  "publisher": "ShareX Team",
+  "summary": "Screen capture and recording tool with annotations and uploads.",
+  "description": "ShareX captures the whole screen, a window or a region with one hotkey, and can record the screen to video or GIF.\n\nAfter a capture it can annotate, copy, save or upload the result to many image and file hosts. It also has small tools like a color picker, ruler and OCR.",
+  "category": "graphics",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://getsharex.com/",
+  "source": "https://github.com/ShareX/ShareX",
+  "icon": "https://raw.githubusercontent.com/ShareX/ShareX/v21.0.0/ShareX.Setup/MicrosoftStore/Assets/Square44x44Logo.altform-unplated_targetsize-256.png",
+  "screenshots": [],
+  "version": "21.0.0",
+  "released": "2026-07-03",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/ShareX/ShareX/releases/download/v21.0.0/ShareX-21.0.0-setup-x64.exe",
+    "sha256": "f213aca04d30e0e2dc7c43bc79acae8622be291cee6014a90962ed87ea5f10cc",
+    "size": 139151207,
+    "format": "exe",
+    "silent_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /NORUN",
+    "detect": "ShareX"
+  }
+}

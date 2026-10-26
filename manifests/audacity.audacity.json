@@ -1,0 +1,24 @@
+{
+  "id": "audacity.audacity",
+  "name": "Audacity",
+  "publisher": "Audacity Team",
+  "summary": "Multi-track audio editor and recorder.",
+  "description": "Audacity records and edits audio. Cut, copy, mix and arrange tracks, then export to WAV, MP3, FLAC, OGG and other formats.\n\nIt ships with effects like noise reduction, compression and EQ, and can load plugins.",
+  "category": "multimedia",
+  "license": "GPL-3.0-only",
+  "homepage": "https://www.audacityteam.org/",
+  "source": "https://github.com/audacity/audacity",
+  "icon": "https://raw.githubusercontent.com/audacity/audacity/Audacity-4.0.1/share/icons/AppIcon/AU4_AppIcon_256x256.png",
+  "screenshots": [],
+  "version": "4.0.1",
+  "released": "2026-09-30",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/audacity/audacity/releases/download/Audacity-4.0.1/audacity-win-4.0.1-x86_64.msi",
+    "sha256": "efb652bf04168f5d4893f28b7cefaaf5ef385d9251544540ac774e3bf54793a3",
+    "size": 49795072,
+    "format": "msi",
+    "silent_args": "/qb",
+    "detect": "Audacity"
+  }
+}

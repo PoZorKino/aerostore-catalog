@@ -1,0 +1,23 @@
+{
+  "id": "sabrogden.ditto",
+  "name": "Ditto",
+  "publisher": "Scott Brogden",
+  "summary": "Clipboard manager that remembers everything you copy.",
+  "description": "Ditto keeps a history of what you copy: text, images, files and HTML. Open it with a hotkey, search the history and paste any old entry.\n\nEntries can be grouped, and the history can be shared between computers on a network.",
+  "category": "utilities",
+  "license": "GPL-3.0-only",
+  "homepage": "https://ditto-cp.sourceforge.io/",
+  "source": "https://github.com/sabrogden/Ditto",
+  "icon": "https://raw.githubusercontent.com/sabrogden/Ditto/3.25.113.0/DittoSetup/appx/ditto.png",
+  "screenshots": [],
+  "version": "3.25.113.0",
+  "released": "2025-09-27",
+  "install": {
+    "type": "portable",
+    "url": "https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoPortable_3_25_113_0.zip",
+    "sha256": "c21dc05f27f744813e0f19d2d20842546baea160ab366382548aa283e2636216",
+    "size": 5116571,
+    "archive": "zip",
+    "exe": "Ditto/Ditto.exe"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "supertuxkart.supertuxkart",
+  "name": "SuperTuxKart",
+  "publisher": "SuperTuxKart Team",
+  "summary": "3D kart racing game with story mode, online races and battle arenas.",
+  "description": "SuperTuxKart is an arcade kart racer starring Tux and friends. Race on over 20 tracks with power-ups, play the story mode, or go online and in split screen.\n\nThere are also battle, soccer and capture-the-flag modes, and an add-on browser for community karts and tracks.",
+  "category": "games",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://supertuxkart.net/",
+  "source": "https://github.com/supertuxkart/stk-code",
+  "icon": "https://raw.githubusercontent.com/supertuxkart/stk-code/1.5/data/supertuxkart_256.png",
+  "screenshots": [],
+  "version": "1.5",
+  "released": "2025-10-20",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-installer-x86_64.exe",
+    "sha256": "a1260ebb73dd9da13ec3e37f526f29e494b3b66c00c05fd70767b30a4497d95e",
+    "size": 723247478,
+    "format": "exe",
+    "silent_args": "/S",
+    "detect": "SuperTuxKart"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "igorpavlov.7zip",
+  "name": "7-Zip",
+  "publisher": "Igor Pavlov",
+  "summary": "File archiver with a high compression ratio. Opens zip, rar, 7z, tar and many more.",
+  "description": "7-Zip packs and unpacks archives. Its own 7z format compresses better than zip, and it can open most archive formats you will run into, including rar, tar, gz, xz, iso and cab.\n\nIt adds a right-click menu to Explorer and comes with a plain two-pane file manager.",
+  "category": "utilities",
+  "license": "LGPL-2.1-or-later AND BSD-3-Clause",
+  "homepage": "https://www.7-zip.org/",
+  "source": "https://github.com/ip7z/7zip",
+  "icon": "https://raw.githubusercontent.com/ip7z/7zip/26.05/CPP/7zip/UI/FileManager/FM.ico",
+  "screenshots": [],
+  "version": "26.05",
+  "released": "2026-10-21",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/ip7z/7zip/releases/download/26.05/7z2605-x64.exe",
+    "sha256": "fd99e86f57d8f429ef5ed045bf98315af962e2309b0f1ba87a147a44c71647d0",
+    "size": 1663506,
+    "format": "exe",
+    "silent_args": "/S",
+    "detect": "7-Zip"
+  }
+}

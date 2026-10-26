@@ -1,0 +1,24 @@
+{
+  "id": "donho.notepadplusplus",
+  "name": "Notepad++",
+  "publisher": "Don Ho",
+  "summary": "Fast source code and text editor with tabs, syntax highlighting and plugins.",
+  "description": "Notepad++ is a small, fast text editor for code and plain text. It highlights syntax for dozens of languages, opens files in tabs and handles large files well.\n\nMacros, regex search and replace across files, and a plugin manager cover most of the rest.",
+  "category": "development",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://notepad-plus-plus.org/",
+  "source": "https://github.com/notepad-plus-plus/notepad-plus-plus",
+  "icon": "https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/v8.9.8.1/PowerEditor/src/icons/npp.ico",
+  "screenshots": [],
+  "version": "8.9.8.1",
+  "released": "2026-09-24",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.8.1/npp.8.9.8.1.Installer.x64.exe",
+    "sha256": "26f3bcced788fadbac4e7e577b430ea2ce6060cf3bcad993ef4612ecd7d743da",
+    "size": 6963432,
+    "format": "exe",
+    "silent_args": "/S",
+    "detect": "Notepad++"
+  }
+}

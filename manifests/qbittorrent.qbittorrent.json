@@ -1,0 +1,24 @@
+{
+  "id": "qbittorrent.qbittorrent",
+  "name": "qBittorrent",
+  "publisher": "The qBittorrent project",
+  "summary": "BitTorrent client without ads, with a built-in search and a web interface.",
+  "description": "qBittorrent downloads torrents and magnet links. It has sequential downloading, RSS feeds with download rules, IP filtering and a search engine that queries torrent sites through plugins.\n\nA web interface lets you control it from another device.",
+  "category": "internet",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.qbittorrent.org/",
+  "source": "https://github.com/qbittorrent/qBittorrent",
+  "icon": "https://raw.githubusercontent.com/qbittorrent/qBittorrent/release-5.3.0/dist/unix/menuicons/192x192/apps/qbittorrent.png",
+  "screenshots": [],
+  "version": "5.3.0",
+  "released": "2026-10-20",
+  "install": {
+    "type": "installer",
+    "url": "https://github.com/qbittorrent/qBittorrent/releases/download/release-5.3.0/qbittorrent_5.3.0_x64_setup.exe",
+    "sha256": "aff5b3bdc00d6e5773d6099ba30f9696dd3dfd1669ab0f64ce5c4e7168486436",
+    "size": 50030660,
+    "format": "exe",
+    "silent_args": "/S",
+    "detect": "qBittorrent"
+  }
+}

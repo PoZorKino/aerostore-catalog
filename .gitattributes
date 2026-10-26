@@ -1,0 +1,5 @@
+# Signatures cover the exact bytes of each manifest. Never let git rewrite
+# line endings here, or a Windows checkout signs different bytes than the
+# server serves.
+manifests/** -text
+keys.json -text

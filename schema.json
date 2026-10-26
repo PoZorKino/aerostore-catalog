@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerostore.dexx.moe/schema.json",
+  "title": "aerostore manifest",
+  "description": "One app in the aerostore catalog. See docs/api.md. The license check (OSI/FSF list) and id == file name are only enforced by cmd/validate.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "publisher", "summary", "category", "license", "source", "icon", "version", "install"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(\\.[a-z0-9-]+)+$", "maxLength": 64 },
+    "name": { "type": "string", "minLength": 1, "maxLength": 60 },
+    "publisher": { "type": "string", "minLength": 1, "maxLength": 60 },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "description": { "type": "string", "maxLength": 4000 },
+    "category": {
+      "enum": ["development", "graphics", "internet", "multimedia", "office", "system", "games", "utilities", "education", "security"]
+    },
+    "license": { "type": "string", "minLength": 1, "description": "SPDX id or expression, OSI-approved or FSF-free" },
+    "homepage": { "$ref": "#/$defs/https" },
+    "source": { "$ref": "#/$defs/https" },
+    "icon": { "$ref": "#/$defs/https" },
+    "screenshots": { "type": "array", "maxItems": 6, "items": { "$ref": "#/$defs/https" } },
+    "version": { "type": "string", "minLength": 1, "maxLength": 40 },
+    "released": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "install": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "url", "sha256", "size"],
+      "properties": {
+        "type": { "enum": ["installer", "portable"] },
+        "url": { "$ref": "#/$defs/https" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "size": { "type": "integer", "minimum": 1 },
+        "format": { "enum": ["exe", "msi"] },
+        "silent_args": { "type": "string", "maxLength": 200 },
+        "detect": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "archive": { "enum": ["zip", "exe"] },
+        "exe": { "type": "string", "pattern": "(?i)\\.exe$" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "installer" } } },
+          "then": {
+            "required": ["format", "detect"],
+            "not": { "anyOf": [{ "required": ["archive"] }, { "required": ["exe"] }] }
+          }
+        },
+        {
+          "if": { "properties": { "type": { "const": "portable" } } },
+          "then": {
+            "required": ["archive", "exe"],
+            "not": { "anyOf": [{ "required": ["format"] }, { "required": ["silent_args"] }, { "required": ["detect"] }] }
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "https": { "type": "string", "pattern": "^https://[^/@\\s]+", "maxLength": 2048 }
+  }
+}
